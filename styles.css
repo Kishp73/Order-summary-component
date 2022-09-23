@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Bright-blue-active: hsl(224, 23%, 55%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --shadow-buttom: rgba(0, 0, 0, 0.1);
+}
+
+html{height: 100vh; width: 100vw;}
+body{
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url("/images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: var(--Pale-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main{
+    width: 20.625rem;
+    height: 35.625rem;
+    margin: auto auto auto;
+}
+
+.card_container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--Very-pale-blue);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.image_container{
+    height: 10rem;
+    width: 20.625rem;
+}
+
+.image{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content_container{
+    padding: 2.5rem 1.875rem 0;
+}
+
+.txt_title{
+    color: var(--Dark-blue);
+    font-weight: 900;
+    text-align: center;
+}
+
+.txt_description{
+    color: var(--Desaturated-blue); 
+    text-align: center;   
+    font-weight: 500;
+    margin: 1.5625rem 0 2.8125rem;
+}
+
+.itpayment_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.icon_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.25rem;
+}
+
+.icon_music{
+    display: block;
+}
+
+.plan_value_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3.125rem;
+}
+
+.txt_plan{
+    color: var(--Dark-blue);
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.txt_value{
+    color: var(--Desaturated-blue);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.buy_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttom_pay{
+    width: 17.5rem;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    margin-bottom: 1.875rem;
+    border: 0;
+    box-shadow: 0 15px 10px 0 var(--shadow-buttom)
+}
+.txt_buttom{
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.buttom_pay:hover{
+    background-color: var(--Bright-blue-active);
+    cursor: pointer;
+}
+
+.txt_cancel_order{
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.txt_cancel_order:hover{
+    cursor: pointer;
+    color: var(--Dark-blue);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 450px){
+    body{
+        background-image: url("/images/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: top; 
+    }
+    main{
+        width: 450px;
+    }
+    .image_container{
+        height: 10rem;
+        width: 28.125rem;
+    }
+}
+
+@media (min-width: 500px) and (min-height: 680px){
+    html{ font-size: 21.8px;}
+    body{
+        background-image: url("/images/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: top; 
+    }
+    main{
+        width: 450px;
+        height: 700px;
+        margin: auto auto auto;
+    }
+
+    .image_container{
+        height: 228px;
+        width: 450px;
+    }
+
+    .txt_title{
+        font-size: 1em;
+    }
+    .txt_description{
+        font-size: 0.8em;
+    }
+
+    .txt_value{
+        font-size: 0.8em;
+    }
+
+    .txt_plan{
+        font-size: 1em;
+    }
+    .txt_buttom{
+        font-size: 1em;
+    }
+    .txt_cancel_order{
+        font-size: 0.8em;
+    }
+    .content_container{
+        padding: 2.5rem 1.875rem 2.3rem;
+    }
+
+}
